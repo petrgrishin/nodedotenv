@@ -16,7 +16,7 @@ module.exports = new class
     .min(0).whitespace()
     .then('=')
     .min(0).whitespace()
-    .min(0).from(["A-Za-z0-9_"]).asGroup()
+    .maybeSome(["A-Za-z0-9_"]).asGroup()
     .lineBreak()
     .globalMatch()
     .getRegExp()
