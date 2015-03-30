@@ -12,7 +12,7 @@ module.exports = new class
   parse: (content) ->
     regex = r
     .min(0).whitespace()
-    .min(1).from(["A-Za-z0-9_"]).asGroup()
+    .some(["A-Za-z0-9_"]).asGroup()
     .min(0).whitespace()
     .then('=')
     .min(0).whitespace()
